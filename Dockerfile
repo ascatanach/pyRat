@@ -88,7 +88,7 @@ RUN python2 /usr/local/bin/pip   --default-timeout=100 install rpy2
 
 ##Install R kernel
 RUN install.r devtools \
-&& git clone https://github.com/armstrtw/rzmq.git --recursive \
+&& git clone https://github.com/armstrtw/rzmq --recursive \
 && echo "library(devtools) ; install_local('./rzmq')" | r  \
 && echo "library(devtools) ; install_github('IRkernel/repr' )" | r  \
 &&echo "library(devtools) ; install_github(c('IRkernel/IRdisplay','IRkernel/IRkernel'))" | r \
